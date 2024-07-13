@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get ("/dice/1/20") , { :controller => "casino" , :action => "jackpot"}
 
   get ("/dice/5/4") , { :controller => "casino" , :action => "blackjack"}
+
+  get ("/dice/:mika/:archie") , { :controller => "casino" , :action => "roulette"}
 end

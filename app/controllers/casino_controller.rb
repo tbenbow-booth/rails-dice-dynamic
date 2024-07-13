@@ -54,4 +54,21 @@ class CasinoController < ApplicationController
 
     render ({ :template => "monaco_templates/five_four"})
   end
+
+  def roulette
+    @RANDOM_DICE = params.fetch("mika").to_i
+    @RANDOM_SIDES = params.fetch("archie").to_i
+   
+     @rolls = []
+   
+       @RANDOM_DICE.times do
+         die = rand(1..@RANDOM_SIDES)
+   
+         @rolls.push(die)
+       end
+
+       render ({ :template => "monaco_templates/archie"})
+
+      end
+
 end
